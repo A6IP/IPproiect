@@ -1,25 +1,27 @@
-<div class="container" *ngFor="let item of infoList" >
-<div class="price">
-    <a id="price" >{{item.price}}€</a>
-    <a id="pricem">{{item.mediumPrice}}€/m<sup>2</sup></a>
-</div>
-<div class="details">
-    <h1>Date despre apartamnet: </h1>
-    <div class="row">
-        <div class="column">
-            <a>Locatie: {{item.location}} </a>
-            <a>Numar camere: {{item.rooms}} </a>
-            <a>Etaj: {{item.floor}}</a>
-        </div>
-        <div class="column">
-            <a>Suprafata utila: {{item.surface}}m<sup>2</sup></a>
-            <a>Numar bai: {{item.bathrooms}}</a>
-            <a>Tip imobil: {{item.type}}</a>
+<div class="container" >
+    <div class="price">
+        <a id="price" >{{data.houseID}}€</a>
+        <a id="pricem">{{data.currentPrice}}€/m<sup>2</sup></a>
+    </div>
+    <div class="details">
+        <h1>Apartment information: </h1>
+        <div class="row">
+            <div class="column">
+                <a>Location: {{data.address}} </a>
+                <a>Number of rooms: {{data.noOfRooms}} </a>
+                <a>Floor: {{data.download_url}}</a>
+            </div>
+            <div class="column">
+                <a>Land Surface: {{data.landSurface}}m<sup>2</sup></a>
+                <a>Number of Bathrooms: {{data.noOfBathrooms}}</a>
+                <a>House type: {{data.houseType}}</a>
+            </div>
         </div>
     </div>
-</div>
-<div class="description">
-    <h1> Description</h1>
-    <p>{{item.description}}</p>
-</div>
-</div>
+    <div class="description">
+        <h1> Description</h1>
+        <p>{{data.description}}</p>
+    </div>
+    </div>
+    
+    

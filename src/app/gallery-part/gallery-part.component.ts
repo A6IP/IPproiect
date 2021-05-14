@@ -3,6 +3,7 @@ import {NgxGalleryOptions} from '@kolkov/ngx-gallery';
 import {NgxGalleryImage} from '@kolkov/ngx-gallery';
 import {NgxGalleryAnimation} from '@kolkov/ngx-gallery';
 
+import { ActivatedRoute } from '@angular/router';
 import { GalleryService } from '../galleryService/gallery.service';
 
 @Component({
@@ -17,7 +18,15 @@ export class GalleryPartComponent implements OnInit {
   galleryImages: NgxGalleryImage[];
 
   data:any;
-  constructor(private postData:GalleryService) { }
+  paramQuery = '';
+  dataToDisplay: any;
+  constructor(private postData:GalleryService, private activatedRoute: ActivatedRoute) {
+    this. activatedRoute.params.subscribe(data =>{
+      this.paramQuery = data.houseID;
+    }
+      )
+   }
+
 
 
   ngOnInit(): void {
@@ -25,12 +34,22 @@ export class GalleryPartComponent implements OnInit {
 
     this.galleryImages = [];
 
+
     this.postData.getPosts().subscribe((result)=>{
       //console.warn("result", result);
       this.data=result;
+      // for(let i=0; i < this.data.length; i++)
+      // {
+      //   if(this.data[i].houseID == this.paramQuery)
+      //     {this.dataToDisplay=this.data[i];
+      //       break;
+      //     }
+      // }
       for(let i=0; i<5; i++){
         console.warn("result", result[i]);
-        this.galleryImages.push({ "small" : result[i]["download_url"], "medium" : result[i]["download_url"], "big" : result[i]["download_url"]})
+         //this.galleryImages.push({ "small" : result["data:image/png;base64, photos[i]"], "medium" : this.data.photos[i]["data:image/png;base64, data"], "big" : this.data.photos[i]["data:image/png;base64, data"]})
+       // this.galleryImages.push({ "small" : this.dataToDisplay["download_url"], "medium" : this.dataToDisplay["download_url"], "big" : this.dataToDisplay["download_url"]})
+
       }
   })
 

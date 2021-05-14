@@ -83,46 +83,46 @@ data: any;
   breakPointsToggle: boolean;
 
 
-  name = 'Angular';
-  imageObject = [{
-      image: 'this.data.url',
-      thumbImage: './assets/house.png',
-      alt: 'alt of image',
-      title: '70.000$ 5 camere Valea Lupului, Iasi'
-  }, {
-      image: './assets/house3.png',
-      thumbImage: './assets/house3.png',
-      title: '70.000$ 5 camere Valea Lupului, Iasi'
-  }, {
-      image: './assets/house2.png',
-      thumbImage: './assets/house2.png',
-      title: '70.000$ 5 camere Valea Lupului, Iasi'
-  }, {
-      image: './assets/house.png',
-      thumbImage: './assets/house.png',
-      title: '70.000$ 5 camere Valea Lupului, Iasi'
-  }, {
-      image: './assets/house2.png',
-      thumbImage: './assets/house2.png',
-      title: '70.000$ 5 camere Valea Lupului, Iasi'
-  }, {
-      image: './assets/house3.png',
-      thumbImage: './assets/house3.png',
-      title: '70.000$ 5 camere Valea Lupului, Iasi'
-  },
-  {image: './assets/house.png',
-  thumbImage: './assets/house.png',
-  alt: 'alt of image',
-  title: '70.000$ 5 camere Valea Lupului, Iasi'
-}, {
-  image: 'this.data.url',
-  thumbImage: './assets/house3.png',
-  title: '70.000$ 5 camere Valea Lupului, Iasi'
-}, {
-  image: './assets/house2.png',
-  thumbImage: './assets/house2.png',
-  title: '70.000$ 5 camere Valea Lupului, Iasi'
-}];
+//   name = 'Angular';
+//   imageObject = [{
+//       image: 'this.data.url',
+//       thumbImage: './assets/house.png',
+//       alt: 'alt of image',
+//       title: '70.000$ 5 camere Valea Lupului, Iasi'
+//   }, {
+//       image: './assets/house3.png',
+//       thumbImage: './assets/house3.png',
+//       title: '70.000$ 5 camere Valea Lupului, Iasi'
+//   }, {
+//       image: './assets/house2.png',
+//       thumbImage: './assets/house2.png',
+//       title: '70.000$ 5 camere Valea Lupului, Iasi'
+//   }, {
+//       image: './assets/house.png',
+//       thumbImage: './assets/house.png',
+//       title: '70.000$ 5 camere Valea Lupului, Iasi'
+//   }, {
+//       image: './assets/house2.png',
+//       thumbImage: './assets/house2.png',
+//       title: '70.000$ 5 camere Valea Lupului, Iasi'
+//   }, {
+//       image: './assets/house3.png',
+//       thumbImage: './assets/house3.png',
+//       title: '70.000$ 5 camere Valea Lupului, Iasi'
+//   },
+//   {image: './assets/house.png',
+//   thumbImage: './assets/house.png',
+//   alt: 'alt of image',
+//   title: '70.000$ 5 camere Valea Lupului, Iasi'
+// }, {
+//   image: 'this.data.url',
+//   thumbImage: './assets/house3.png',
+//   title: '70.000$ 5 camere Valea Lupului, Iasi'
+// }, {
+//   image: './assets/house2.png',
+//   thumbImage: './assets/house2.png',
+//   title: '70.000$ 5 camere Valea Lupului, Iasi'
+// }];
   onSwiper(swiper) {
     console.log(swiper);
   }
@@ -136,14 +136,16 @@ ngOnInit() {
   this.postData.getPosts().subscribe((result) => {
     console.warn('result', result);
     this.data = result;
-});
-    // this.data.forEach(m => console.log(m.id))
 
-}
+});
+
+} 
 
 onSelect(item){
-  this.router.navigate(['/house-details', item.id]);
+  this.router.navigate(['/house-details', item.houseID]);
 }
+
+
   setThumbsSwiper(swiper) {
     this.thumbsSwiper = swiper;
   }

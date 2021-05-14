@@ -2,14 +2,16 @@
 
     <ng-template class="carousel-container" swiperSlide *ngFor="let item of data">
         <div class="image-container" (click)="onSelect(item)">
-            <img class="images" src="{{item.download_url}}" alt="image" />
+            <img class="images" src="" alt="image" />
             <div class="image-description">
 
-                <div class="details">{{item.author}} </div>
-                <div class="details">Item id: {{item.id}}</div>
+                <div class="details">{{item.currentPrice}} $ </div>
+                <div class="details">{{item.description}} </div>
+                <div class="details">Address: {{item.address}}</div>
 
             </div>
         </div>
+        
 
     </ng-template>
 

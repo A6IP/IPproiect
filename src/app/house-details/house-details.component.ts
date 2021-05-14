@@ -11,11 +11,14 @@ import { Location } from '@angular/common';
 })
 export class HouseDetailsComponent implements OnInit {
 
+  paramQuery = '';
   constructor(
-    // private route: ActivatedRoute,
-    // private heroService: HouseService,
-    // private location: Location
-  ) {}
+     private activatedRoute: ActivatedRoute
+  
+  ) { this. activatedRoute.params.subscribe(data =>{
+    this.paramQuery = data.houseID;
+  }
+    ) }
 
   ngOnInit(): void {
     // this.getHouse();

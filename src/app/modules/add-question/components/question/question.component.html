@@ -1,26 +1,25 @@
 <form (ngSubmit)="onSubmit($event)" #postForm="ngForm">
 
   <div id="wrapper">
-  <div id="inner1">
-  <mat-form-field class="form-control">
-    <mat-label>Type your title here</mat-label>
-    <input type="text" name="content" matInput #content minlength="1" maxlength="5000"
-      placeholder="Ex. Help needed..." required>
-    <mat-hint align="start"><strong>Don't disclose personal info</strong> </mat-hint>
-    <mat-hint align="end">{{content.value.length}} / 5000</mat-hint>
-  </mat-form-field>
-</div>
+    <div id="inner1">
+      <mat-form-field class="form-control">
+        <mat-label>Type your title here</mat-label>
+        <input type="text" name="title" matInput #title minlength="1" maxlength="5000" placeholder="Ex. Help needed..."
+          required>
+        <mat-hint align="end">{{title.value.length}} / 300</mat-hint>
+      </mat-form-field>
+    </div>
 
-<div id="inner2">
-  <mat-form-field class="form-control">
-    <mat-label>Type your question here</mat-label>
-    <input type="text" name="content" matInput #content minlength="1" maxlength="5000"
-      placeholder="Ex. I need help with..." required>
-    <mat-hint align="start"><strong>Don't disclose personal info</strong> </mat-hint>
-    <mat-hint align="end">{{content.value.length}} / 5000</mat-hint>
-  </mat-form-field>
-</div>
-</div>
+    <div id="inner2">
+      <mat-form-field class="form-control">
+        <mat-label>Type your question here</mat-label>
+        <input type="text" name="content" matInput #content minlength="1" maxlength="5000"
+          placeholder="Ex. I need help with..." required>
+        <mat-hint align="start"><strong>Don't disclose personal info</strong> </mat-hint>
+        <mat-hint align="end">{{content.value.length}} / 5000</mat-hint>
+      </mat-form-field>
+    </div>
+  </div>
   <button type="submit" id="submit" mat-raised-button [disabled]="!postForm.form.valid">
     Submit question
   </button>

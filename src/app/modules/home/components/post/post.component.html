@@ -17,7 +17,7 @@
           </a>
 
           <a class="question">
-            {{$any(post).content}}
+            {{$any(post).title}}
           </a>
         </a>
       </div>
@@ -30,14 +30,15 @@
           {{$any(post).comments.length}} answers</a>
       </span>
 
-      <span class="details" (click)="onClick(i)">
+      <span class="details" (click)="like(i)">
         <mat-icon *ngIf="liked[i]">favorite</mat-icon>
         <mat-icon *ngIf="!liked[i]">favorite_border</mat-icon>
         bookmark question
       </span>
 
-      <span class="details">
-        <mat-icon>outlined_flag</mat-icon>
+      <span class="details" (click)="report(i)">
+        <mat-icon *ngIf="reported[i]">flag</mat-icon>
+        <mat-icon *ngIf="!reported[i]">outlined_flag</mat-icon>
         report question
       </span>
     </div>

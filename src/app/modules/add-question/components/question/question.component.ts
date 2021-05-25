@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
-import { PostResolverService } from '../../../home/components/post/post-resolver.service'
+import { PostResolverService } from '../../../../service/post-resolver.service'
 import { ForumPost } from 'src/app/model/forum-post';
 import { UserService } from '../../../../service/user-service.service'
 
@@ -25,7 +25,9 @@ export class QuestionComponent implements OnInit {
   }
 
   onSubmit(event: any) {
+
     this.forumPost.content = event.target.content.value;
+    this.forumPost.title = event.target.title.value;
 
     this.forumPost.author = {
       id: this.userService.getID(),

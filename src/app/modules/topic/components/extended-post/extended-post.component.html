@@ -15,7 +15,7 @@
           </a>
 
           <a class="question">
-            {{forumPost.content}}
+            {{forumPost.title}}
           </a>
         </a>
       </div>
@@ -33,13 +33,15 @@
             {{forumPost.comments.length}} answers</a>
         </span>
 
-        <span class="details">
-          <mat-icon>favorite_border</mat-icon>
+        <span class="details" (click)="like()">
+          <mat-icon *ngIf="liked">favorite</mat-icon>
+          <mat-icon *ngIf="!liked">favorite_border</mat-icon>
           bookmark question
         </span>
 
-        <span class="details">
-          <mat-icon>outlined_flag</mat-icon>
+        <span class="details" (click)="report()">
+          <mat-icon *ngIf="reported">flag</mat-icon>
+          <mat-icon *ngIf="!reported">outlined_flag</mat-icon>
           report question
         </span>
       </div>

@@ -4,7 +4,7 @@ import { FinalPost } from '../../../../core/final-post.model';
 import { Subscription } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
 import { ForumPost } from 'src/app/model/forum-post';
-import { CommentResolverService } from '../extended-post/comment-resolver.service';
+import { CommentResolverService } from '../../../../service/comment-resolver.service';
 @Component({
   selector: 'app-forum-topic',
   templateUrl: './forum-topic.component.html',

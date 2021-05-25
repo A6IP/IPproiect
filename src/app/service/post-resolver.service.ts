@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { ForumPost } from '../../../../model/forum-post';
-import { UserService } from '../../../../service/user-service.service'
+import { ForumPost } from 'src/app/model/forum-post';
+import { UserService } from './user-service.service'
 
 @Injectable({
   providedIn: 'root'
@@ -44,6 +44,11 @@ export class PostResolverService {
       })
     };
 
-    return this.http.put<ForumPost>(this.backendurl + '/' + post.postID, post, httpOptions);
+    let body = {
+      likes: post.likes,
+      reports: post.reports
+    }
+
+    return this.http.patch<ForumPost>(this.backendurl + '/' + post.postID, body, httpOptions);
   }
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import info from '../../../../_files/info.json';
 import { ForumPost } from '../../../../model/forum-post';
-import { PostResolverService } from './post-resolver.service';
+import { PostResolverService } from '../../../../service/post-resolver.service';
 import { UserService } from '../../../../service/user-service.service'
 
 @Component({
@@ -14,9 +14,11 @@ export class PostComponent implements OnInit {
   public forumPosts: ForumPost[];
 
   public liked: boolean[];
+  public reported: boolean[];
 
   constructor(private postService: PostResolverService, private userService: UserService) {
     this.liked = [];
+    this.reported = [];
   }
 
 
@@ -33,31 +35,70 @@ export class PostComponent implements OnInit {
           }
         });
 
-        if (isLiked)
-          this.liked.push(true);
-        else
-          this.liked.push(false);
+        let isReported = false;
+        post.reports.forEach((userWhoReported) => {
+          if (userWhoReported.id == currentUserId) {
+            isReported = true;
+            return;
+          }
+        });
+
+        this.liked.push(isLiked);
+        this.reported.push(isReported);
+
       });
     });
 
   }
 
-  onClick(i: number): void {
+  like(i: number): void {
     let currentUserId = this.userService.getID();
+    let likedIndex = -1;
+
+    for (let j = 0; j < this.forumPosts[i].likes.length; j++) {
+      if (this.forumPosts[i].likes[j].id == currentUserId) {
+        likedIndex = j;
+        break;
+      }
+    }
 
     if (this.liked[i]) {
-      const userIndex = this.forumPosts[i].likes.indexOf({ id: currentUserId });
-      if (userIndex != -1)
-        this.forumPosts[i].likes.splice(userIndex, 1);
+      if (likedIndex != -1)
+        this.forumPosts[i].likes.splice(likedIndex, 1);
     } else {
-      if (!this.forumPosts[i].likes.includes({ id: currentUserId })) {
+      if (likedIndex == -1)
         this.forumPosts[i].likes.push({ id: currentUserId });
-      }
     }
 
     this.liked[i] = !this.liked[i];
 
-    console.log(this.postService.update(this.forumPosts[i]));
+    this.postService.update(this.forumPosts[i]).subscribe((data: ForumPost) => {
+    });
+  }
+
+  report(i: number): void {
+    let currentUserId = this.userService.getID();
+    let reportedIndex = -1;
+
+    for (let j = 0; j < this.forumPosts[i].reports.length; j++) {
+      if (this.forumPosts[i].reports[j].id == currentUserId) {
+        reportedIndex = j;
+        break;
+      }
+    }
+
+    if (this.reported[i]) {
+      if (reportedIndex != -1)
+        this.forumPosts[i].reports.splice(reportedIndex, 1);
+    } else {
+      if (reportedIndex == -1)
+        this.forumPosts[i].reports.push({ id: currentUserId });
+    }
+
+    this.reported[i] = !this.reported[i];
+
+    this.postService.update(this.forumPosts[i]).subscribe((data: ForumPost) => {
+    });
   }
 
 }

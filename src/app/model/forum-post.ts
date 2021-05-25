@@ -2,6 +2,7 @@ import { ForumComment } from "./forum-comment";
 
 export class ForumPost {
     postID: string;
+    title: string;
     content: string;
     author: {
         id: number;

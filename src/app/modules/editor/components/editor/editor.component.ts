@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
-import { CommentResolverService } from '../../../topic/components/extended-post/comment-resolver.service'
+import { CommentResolverService } from '../../../../service/comment-resolver.service'
 import { ForumComment } from 'src/app/model/forum-comment';
 import { UserService } from '../../../../service/user-service.service'
 

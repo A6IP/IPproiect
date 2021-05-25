@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { ForumComment } from 'src/app/model/forum-comment';
 import { Router } from '@angular/router';
 import { ForumPost } from 'src/app/model/forum-post';
-import { UserService } from '../../../../service/user-service.service'
+import { UserService } from './user-service.service'
 
 @Injectable({
   providedIn: 'root'

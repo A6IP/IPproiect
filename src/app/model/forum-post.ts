@@ -4,11 +4,12 @@ export class ForumPost {
     postID: string;
     content: string;
     author: {
-        userID: string;
-        firstName: string;
-        lastName: string;
+        id: number;
+        name: string;
+        username: string;
+        email: string;
     };
     comments: ForumComment[];
-    likes: { userID: string; }[];
-    reports: { userID: string; }[];
+    likes: { id: number; }[];
+    reports: { id: number; }[];
 }

@@ -42,7 +42,7 @@ html{
 
 a{
     text-decoration: none;
-    /* font-size: 110%; */
+    font-size: 110%;
     white-space: normal;   
 }
 
@@ -129,6 +129,7 @@ a{
         margin: 0em 0em 0em 0.5em;
         position: relative;
         top:60px;
+        /* display: flex; */
     }
 
     .mat-card{

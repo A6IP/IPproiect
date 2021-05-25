@@ -14,14 +14,6 @@ export class AnswerComponent implements OnInit {
 
   comments: ForumComment[];
 
-  //  infoList:{
-  //   id:string,
-  //   username:string,
-  //   question:string,
-  //   answers:string,
-  //   text:string
-  //   }[]=post;
-
   constructor(private route: ActivatedRoute, private commentService: CommentResolverService) { }
 
   ngOnInit(): void {

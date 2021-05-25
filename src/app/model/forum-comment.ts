@@ -4,9 +4,10 @@ export class ForumComment {
         postID: string;
     };
     author: {
-        userID: string;
-        firstName: string;
-        lastName: string;
+        id: number;
+        name: string;
+        username: string;
+        email: string;
     };
     content: string;
 }

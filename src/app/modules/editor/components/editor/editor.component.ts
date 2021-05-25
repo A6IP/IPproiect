@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { CommentResolverService } from '../../../topic/components/extended-post/comment-resolver.service'
 import { ForumComment } from 'src/app/model/forum-comment';
+import { UserService } from '../../../../service/user-service.service'
+
 @Component({
   selector: 'app-editor',
   templateUrl: './editor.component.html',
@@ -11,7 +13,7 @@ export class EditorComponent implements OnInit {
 
   forumComment: ForumComment;
 
-  constructor(private _location: Location, private commentService: CommentResolverService) {
+  constructor(private _location: Location, private commentService: CommentResolverService, private userService: UserService) {
     this.forumComment = new ForumComment();
   }
 
@@ -20,11 +22,14 @@ export class EditorComponent implements OnInit {
 
   onSubmit(event: any) {
     this.forumComment.content = event.target.content.value;
+
     this.forumComment.author = {
-      userID: "bd8839d0-0e92-4812-a817-2e592348c5bf",
-      firstName: "Anonymous",
-      lastName: ""
+      id: this.userService.getID(),
+      name: "",
+      username: "",
+      email: ""
     };
+
     this.commentService.save(this.forumComment).subscribe(result => this.goBack());
   }
 

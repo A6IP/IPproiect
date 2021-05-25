@@ -13,7 +13,7 @@
       <div class="text">
         <a [routerLink]="['/forum-topic', $any(post).postID]">
           <a class="author">
-            {{$any(post).author.firstName}} asked:
+            {{$any(post).author.username}} asked:
           </a>
 
           <a class="question">
@@ -30,8 +30,9 @@
           {{$any(post).comments.length}} answers</a>
       </span>
 
-      <span class="details">
-        <mat-icon>favorite_border</mat-icon>
+      <span class="details" (click)="onClick(i)">
+        <mat-icon *ngIf="liked[i]">favorite</mat-icon>
+        <mat-icon *ngIf="!liked[i]">favorite_border</mat-icon>
         bookmark question
       </span>
 

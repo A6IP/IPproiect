@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { PostResolverService } from '../../../home/components/post/post-resolver.service'
 import { ForumPost } from 'src/app/model/forum-post';
+import { UserService } from '../../../../service/user-service.service'
 
 @Component({
   selector: 'app-question',
@@ -12,7 +13,7 @@ export class QuestionComponent implements OnInit {
 
   forumPost: ForumPost;
 
-  constructor(private _location: Location, private postService: PostResolverService) {
+  constructor(private _location: Location, private postService: PostResolverService, private userService: UserService) {
     this.forumPost = new ForumPost();
   }
 
@@ -25,11 +26,14 @@ export class QuestionComponent implements OnInit {
 
   onSubmit(event: any) {
     this.forumPost.content = event.target.content.value;
+
     this.forumPost.author = {
-      userID: "bd8839d0-0e92-4812-a817-2e592348c5bf",
-      firstName: "Anonymous",
-      lastName: ""
+      id: this.userService.getID(),
+      name: "",
+      username: "",
+      email: ""
     };
+
     this.postService.save(this.forumPost).subscribe(result => this.goBack());
   }
 

@@ -14,7 +14,7 @@ export class UserService {
 
   public getToken(): string {
     //TODO: get from local storage
-    return "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0MUVYa3hieVA0aDVvNk5BQ0VTL2hhWUxndzE1Rm1LdDM5SnFZelhmSHlVPSIsImlhdCI6MTYyMTkzNTk3MiwiZXhwIjoxNjIyMDIyMzcyfQ.nuh3vuPv26M3cDv0lE1IOv_3fHE9B4b0VZFjz3jXfaR0D-sVMAilwwfrYDWUOb8ay-qNmDtSIWHYRLkjmc84Jg";
+    return "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0MUVYa3hieVA0aDVvNk5BQ0VTL2hhWUxndzE1Rm1LdDM5SnFZelhmSHlVPSIsImlhdCI6MTYyMjAxODc1MCwiZXhwIjoxNjIyMTA1MTUwfQ.SDTYrHnL9mDgwTqxCtVD_lgfeEb1jcCBZV4REuVIWEqJR0svW2TCQCaOAsea26qTIdp0WGmk-mIKuqsXuloOZw";
   }
 }
 

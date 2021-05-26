@@ -44,10 +44,23 @@ export class PostResolverService {
       })
     };
 
+    let likesArr: { id: number; }[] = [];
+    let reportsArr: { id: number; }[] = [];
+
+    post.likes.forEach((user) => {
+      likesArr.push({ id: user.id });
+    });
+
+    post.reports.forEach((user) => {
+      reportsArr.push({ id: user.id });
+    });
+
     let body = {
-      likes: post.likes,
-      reports: post.reports
+      likes: likesArr,
+      reports: reportsArr
     }
+
+    console.log(body);
 
     return this.http.patch<ForumPost>(this.backendurl + '/' + post.postID, body, httpOptions);
   }

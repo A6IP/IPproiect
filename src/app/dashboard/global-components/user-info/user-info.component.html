@@ -1,0 +1,37 @@
+
+<section class="acc__info"  [hidden]="changeUserDetails">
+    <img src="../../../assets/user-info/profile_pic.png" alt="profilepic" class="profile__pic">
+    <div class="info">
+      <p class="text">{{this.user.name}}</p>
+      <p class="text">{{this.user.email}}</p>
+      <p class="text">{{this.user.phoneNumber}}</p>
+    </div>
+    <div class="btns">
+      <a class="btnUser text" id="edit--btn" (click)="updateUserInfo()">Edit <img src="../../../assets/user-info/pencil.png" alt="pencil"> </a>
+      <button class="btnUser text">Change password <img src="../../../assets/user-info/lock.png" alt="lock"> </button>
+    </div>
+  </section>
+  
+  <section class="edit__info__form hide" [hidden]="!changeUserDetails">
+    <p class="title">Edit your informations</p>
+    <form (ngSubmit)="saveChanges()">
+    <div class="edit__field">
+        <label for="user__firstName">Name</label>
+        <input type="text" [(ngModel)]="user.name" name="firstName" id="user__firstName" class="edit__input">
+    </div>
+   <!-- <div class="edit__field">
+        <label for="user__lastName">Last Name</label>
+        <input type="text" id="user__lastName"  [(ngModel)]="user.lastName" name="lastName" class="edit__input">
+    </div>--> 
+    <div class="edit__field">
+        <label for="user__email">Email Address</label>
+        <input type="email" id="user__email"  [(ngModel)]="user.email" name="email" class="edit__input">
+    </div>
+    <div class="edit__field">
+        <label for="user__phone">Phone Number</label>
+        <input type="text" id="user__phone" [(ngModel)]="user.phoneNumber" name="phoneNumber" class="edit__input">
+    </div>
+    <button class="btn save--btn" (click)="saveChanges()">Save changes</button>
+  </form>
+  </section>
+  

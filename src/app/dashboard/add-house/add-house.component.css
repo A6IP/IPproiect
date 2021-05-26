@@ -1,0 +1,25 @@
+div {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  align-self: center;
+  justify-content: space-around;
+}
+.center {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  position: absolute;
+  top: 15em;
+  left: 40em;
+  height: 50%;
+  width: 50%;
+}
+
+.user__seller--btns {
+  position: absolute;
+  top: 1%;
+  left: -10%;
+}

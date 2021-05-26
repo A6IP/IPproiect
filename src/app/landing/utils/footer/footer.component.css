@@ -1,0 +1,61 @@
+/*@font-face {*/
+/*  font-family: Manrope-bold;*/
+/*  !* src: url(./assets/fonts/Manrope-Bold.ttf); *!*/
+/*  src: "./assets/fonts/Manrope-Bold.ttf";*/
+/*}*/
+
+.container{
+  display:flex;
+  align-self: flex-end;
+}
+.footer {
+
+  background-color: #283655;
+  left: 0;
+  width: 100vw;
+  height: 12%;
+  z-index: 10;
+  margin-top: 5%;
+  margin-bottom: auto;
+
+  display:grid;
+  grid-row-gap: 50px;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  align-content: center;
+  font-size:1.5vw;
+  gap: 8vw;
+  grid-auto-flow: column;
+  font-family: Manrope-bold;
+
+}
+
+.copyright{
+  width: 1vw;
+  height: 1vw;
+}
+
+.image{
+  width: 10vw;
+  height: 10vw;
+}
+
+.content-paragraph{
+  /* margin: 0;
+-ms-transform: translateY(-50%);
+transform: translateY(-50%); */
+  /* position: absolute; */
+  /* top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
+  /* justify-content: center;
+align-content: center; */
+  color: rgb(255, 255, 255);
+  /* float: right; */
+  display:flex;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}

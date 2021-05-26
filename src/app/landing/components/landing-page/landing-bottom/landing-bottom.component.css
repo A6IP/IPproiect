@@ -1,0 +1,138 @@
+a{
+  text-decoration:none;
+}
+.card-section{
+  max-width:1650px;
+  width:80vw;
+  margin: 5vw auto;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  color: #707070;
+  padding-bottom: 3vw;
+  font-size: 1.5vw;
+}
+
+.circles-wrapper{
+  margin-top: 5%;
+  width:60%;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items:center;
+  gap:5%;
+}
+.circle{
+  display: flex;
+  flex-direction: column;
+}
+.img-landing {
+  width:5vw;
+  height:5vw;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+#howWorks{
+  margin:5% auto;
+  font-size:3vw;
+
+}
+#not-sure-landing{
+  margin-top: 5vw;
+  font-size:2vw;
+}
+.cards-wrapper{
+  margin-top: 5%;
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items:center;
+  gap:5%;
+
+}
+.card{
+  background: #F2F2F2 0% 0% no-repeat padding-box;
+  border-radius: 20px;
+  position: relative;
+  width:90%;
+  height:15vw;
+}
+.card > .img-landing{
+  position: relative;
+  top: -2.5vw;
+}
+.cta-see-all{
+  color: white;
+  font-size:1.5vw;
+  padding:0.75vw 3vw;
+  background: #283655 0% 0% no-repeat padding-box;
+  border-radius: 30px;
+}
+.instructions{
+  width:90%;
+  margin:0 auto;
+}
+
+@media screen and (max-width: 900px) {
+  .card-section{
+
+    width:90vw;
+
+  }
+
+  .circles-wrapper{
+    margin-top: 5%;
+    width:100%;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: row;
+
+  }
+  /*.circle{*/
+  /*  display: flex;*/
+  /*  flex-direction: column;*/
+  /*}*/
+  .img-landing {
+    width:15vw;
+    height:15vw;
+    margin-left:auto;
+    margin-right:auto;
+  }
+.circle p {
+  font-size:5vw;
+}
+  #howWorks{
+    margin:5% auto;
+    font-size:8vw;
+
+  }
+  #not-sure-landing{
+    margin-top: 5vw;
+    font-size:4vw;
+  }
+  .cards-wrapper{
+
+    flex-direction: column;
+  }
+  .card{
+    margin-top: 12vw;
+    width:90%;
+    height:50vw;
+  }
+  .card > .img-landing{
+    top: -7.5vw;
+  }
+  .cta-see-all{
+    margin:5vw auto;
+    font-size:4vw;
+    padding:1.5vw 4vw;
+  }
+  .instructions{
+
+    font-size:6vw;
+  }
+}

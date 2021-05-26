@@ -1,0 +1,26 @@
+<div class="container">
+<div class="price">
+    <a id="price" >{{result.currentPrice}}€</a>
+    <a id="pricem">{{result.recommendedPrice}}€/m<sup>2</sup></a>
+</div>
+<div class="details">
+    <h1>Date despre locuinta: </h1>
+    <div class="row">
+        <div class="column">
+            <a>Locatie: {{result.address}} </a>
+            <a>Numar camere: {{result.noOfRooms}} </a>
+            <a>Etaj: {{result.floor}}</a>
+        </div>
+        <div class="column">
+            <a>Suprafata utila: {{result.surface}}m<sup>2</sup></a>
+            <a>Numar bai: {{result.noOfBathrooms}}</a>
+            <a>Tip imobil:   <a *ngIf="result.sellType==1; else elseBlock">Rent</a>
+              <ng-template #elseBlock>Buy</ng-template></a>
+        </div>
+    </div>
+</div>
+<div class="description">
+    <h1> Description</h1>
+    <p>{{result.description}}</p>
+</div>
+</div>

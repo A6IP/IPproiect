@@ -1,0 +1,29 @@
+export interface IHouse {
+  houseID: string;
+  userID: string;
+  description: string;
+  title: string;
+  city: string;
+  country: string;
+  address: string;
+  area: string;
+  latitude: number;
+  longitude: number;
+  constructionYear: number;
+  noOfRooms: number;
+  floor: number;
+  surface: number;
+  landSurface: number;
+  noOfBathrooms: number;
+  houseType: number;
+  sellType: number;
+  priceHistory: any[];
+  favoriteHistory: any[];
+  noOfFave: number;
+  recommendedPrice: number;
+  currentPrice: number;
+  creationDate: number;
+  viewsHistory: any[];
+  views: number;
+  photos: [];
+}

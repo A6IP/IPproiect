@@ -1,0 +1,52 @@
+/*@font-face {*/
+/*    font-family: Montserrat-bold;*/
+/*    src: url(../../assets/fonts/Montserrat/Montserrat-Bold.ttf);*/
+/*}*/
+app-base64gallery{
+  width:70%;
+}
+app-user-contact{
+  width:30%;
+}
+.house-page{
+  max-width:2000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.first-row {
+  display: flex;
+  flex-direction: row;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+app-gallery-part {
+  /*float: left;*/
+  /*left: 1rem;*/
+}
+
+app-user-contact {
+  /*float: right;*/
+  /*right: 1rem;*/
+}
+
+p {
+  margin-top: 5vh;
+
+  font-size: 30px;
+  font-family: Montserrat-bold;
+  color: #707070;
+  text-align: center;
+}
+
+@media (max-width: 1110px) {
+  .first-row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  app-user-contact {
+    align-self: center;
+  }
+}

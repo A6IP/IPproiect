@@ -1,0 +1,53 @@
+<div class="fav__slider">
+    <ul class="item__list">
+      <button class="prev__btn" class="navigation__btns" id="fav__prev" (click)="favPrev()">
+        <img class="scroll__btn" src="../../assets/userDashboard/left.svg" alt="P">
+      </button>
+      <li> 
+        <div class="list__item" id="item">
+          <a [routerLink]="['/house-details', favData[favIndex-1]?.houseID]">
+            <img [src]="favData[favIndex-1]?.photos[0]!=undefined ?
+            this._sanitizer.bypassSecurityTrustResourceUrl('data:image/jpg;base64,'
+               + favData[favIndex-1]?.photos[0]) : '../../assets/userDashboard/default.png'" alt="fav1">
+          </a>
+          <button class="removeFav" id="removeFav" (click)="remove(favData[favIndex-1].houseID, favIndex-1)">
+            <img class="remove-Fav-Img" src="../../assets/userDashboard/remove.svg" alt="remove fav">
+          </button>
+          <p class="price">{{ favData[favIndex-1]?.currentPrice }}&euro;</p>
+          <p class="description">{{ favData[favIndex - 1]?.noOfRooms }} camere, {{ favData[favIndex - 1]?.surface }} mp, {{favData[favIndex - 1]?.address}}, {{favData[favIndex - 1]?.city}}</p>
+        </div>
+      </li>
+      <li>
+        <div class="list__item" id="item">
+          <a [routerLink]="['/house-details', favData[favIndex]?.houseID]">
+            <img [src]="favData[favIndex]?.photos[0]!=undefined ?
+            this._sanitizer.bypassSecurityTrustResourceUrl('data:image/jpg;base64,'
+               + favData[favIndex]?.photos[0]) : '../../assets/userDashboard/default.png'" alt="fav2">
+          </a>
+          <button class="removeFav" id="removeFav" (click)="remove(favData[favIndex].houseID, favIndex)">
+            <img class="remove-Fav-Img" src="../../assets/userDashboard/remove.svg" alt="remove fav">
+          </button>
+          <p class="price">{{ favData[favIndex]?.currentPrice }}&euro;</p>
+          <p class="description">{{ favData[favIndex]?.noOfRooms }} camere, {{ favData[favIndex]?.surface }} mp, {{favData[favIndex]?.address}}, {{favData[favIndex]?.city}}</p>
+        </div>
+      </li>
+      <li>
+        <div class="list__item" id="item">
+          <a [routerLink]="['/house-details', favData[favIndex+1]?.houseID]">
+            <img [src]="favData[favIndex+1]?.photos[0]!=undefined ?
+            this._sanitizer.bypassSecurityTrustResourceUrl('data:image/jpg;base64,'
+               + favData[favIndex+1]?.photos[0]) : '../../assets/userDashboard/default.png'" alt="fav3">
+          </a>
+          <button class="removeFav" id="removeFav" (click)="remove(favData[favIndex+1].houseID, favIndex+1)">
+            <img class="remove-Fav-Img" src="../../assets/userDashboard/remove.svg" alt="remove fav">
+          </button>
+          <p class="price">{{ favData[favIndex+1]?.currentPrice }}&euro;</p>
+          <p class="description">{{ favData[favIndex + 1]?.noOfRooms }} camere, {{ favData[favIndex + 1]?.surface }} mp, {{favData[favIndex + 1]?.address}}, {{favData[favIndex + 1]?.city}}</p>
+        </div>
+      </li>
+      <button class="next__btn" class="navigation__btns" id="fav__next" (click)="favNext()">
+        <img class="scroll__btn" src="../../assets/userDashboard/right.svg" alt="N">
+      </button>
+    </ul>
+  </div>
+  

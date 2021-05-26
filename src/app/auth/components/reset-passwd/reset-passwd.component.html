@@ -1,0 +1,27 @@
+<mat-dialog-content class="panel">
+    <div class="left">
+        <button id="bck_btn" (click)="goToLogin()" style="cursor: pointer;">
+            <mat-icon id="bck_arw" matSuffix>arrow_back</mat-icon>
+            Back
+        </button>
+        <h2>Change Password</h2>
+        <form [formGroup]="resetForm" (ngSubmit)="onSubmit()">
+            <mat-form-field id="new-psswd" appearance="outline">
+                <mat-label>New Password</mat-label>
+                <input matInput formControlName="newPasswd" [type]="hide ? 'password' : 'text'" required />
+                <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </mat-form-field>
+            <mat-form-field id="confirm-psswd" appearance="outline">
+                <mat-label>Confirm New Password</mat-label>
+                <input matInput formControlName="confirmPasswd" [type]="hideConfirm ? 'password' : 'text'"
+                    required />
+                <mat-icon matSuffix (click)="hideConfirm = !hideConfirm">{{hideConfirm ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </mat-form-field>
+            <button mat-raised-button type="submit" class="submit_btn" [disabled]="!resetForm.valid" (click)="onSubmit()">Submit</button>
+        </form>
+    </div>
+    <div class="right">
+        <img src="../../../../assets/sun_clouds.png" alt="clouds" width="85%">
+        <img src="../../../../assets/buildings.png" alt="buildings" width="100%">
+    </div>
+</mat-dialog-content>

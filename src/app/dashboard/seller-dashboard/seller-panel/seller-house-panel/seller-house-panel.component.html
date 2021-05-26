@@ -1,0 +1,28 @@
+<!-- House panel -->
+<div class="seller-house-panel--container" *ngIf="this.house.houseID !== undefined" [routerLink]="['/house-details', this.house.houseID]">
+  <img alt="house image" [src]="getImage()" *ngIf="house.photos?.length">
+  <div class="seller-house-panel-content--container">
+    <div class="panel-title--container">
+      <h2 class="panel-title">{{getTitle()}}</h2>
+      <p class="panel-content panel-content-likes">{{getFavoritesNumber()}}♡</p>
+    </div>
+    <p class="panel-content panel-content-price">{{getPrice()}}</p>
+    <p class="panel-content panel-content-text">{{getDescription()}}</p>
+    <div class="dropdown-menu--container">
+      <button id="settings-btn">...</button>
+      <div class="dropdown-menu-content">
+        <a routerLink='/editHouse' (click)="saveHouse()">Edit</a>
+        <button id="delete-btn" (click)="deleteHouse()">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Loading house panel -->
+<div class="seller-house-panel--container" *ngIf="this.house.houseID === undefined">
+  <div class="loading-house--container">
+    <span class="loading-bullet"></span>
+    <span class="loading-bullet"></span>
+    <span class="loading-bullet"></span>
+  </div>
+</div>

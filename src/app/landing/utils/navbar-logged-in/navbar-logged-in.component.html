@@ -1,0 +1,71 @@
+<div>
+  <mat-toolbar class="mat-elevation">
+    <div class="showing" >
+      <button mat-icon-button (click)="sidenav.toggle()" id="ham-manu">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+
+    <div class="showingBar" fxShow="true" fxHide.lt-md="true">
+      <a mat-button routerLink=''>Home</a>
+      <a mat-button routerLink='/about'>Forum</a>
+
+    </div>
+    <span class="spacer"></span>
+
+    <div class="showingBar" fxShow="true" fxHide.lt-md="true">
+      <a mat-button (click)="checkRoute()">
+        <mat-icon>account_circle</mat-icon>
+      </a>
+      <a mat-button routerLink='/favorites'>
+        <mat-icon>favorite</mat-icon>
+      </a>
+      <button mat-icon-button [matMenuTriggerFor]="menu"  yPosition="above" aria-label="Example icon-button with a menu">
+        <mat-icon>arrow_drop_down_circle</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item [routerLink] ="['/Settings']">
+          <span>Account settings</span>
+        </button>
+        <button mat-menu-item routerLink='/profile'>
+          <span>Your profile</span>
+        </button>
+        <button mat-menu-item routerLink='/' (click)="logout()">
+          <span>Log out</span>
+        </button>
+      </mat-menu>
+    </div>
+
+  </mat-toolbar>
+
+
+  <mat-sidenav-container #myContainer fxFlexFill class="example-container" autosize>
+
+    <mat-sidenav color="primary" #sidenav fxLayout="column"  mode="over" (click)="sidenav.close()" autosize>
+
+      <div class=" menu-items" fxLayout="column">
+        <div>
+          <a mat-button routerLink=''>Home</a>
+        </div>
+        <div>
+          <a mat-button routerLink='/about'>Your profile</a>
+        </div>
+        <div>
+          <a mat-button routerLink='/favorites'>Wishlist</a>
+        </div>
+        <div>
+          <a mat-button routerLink='/about'>About</a>
+        </div>
+        <div>
+          <a mat-button routerLink='/' (click)="logout()">Log out</a>
+        </div>
+
+      </div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+
+  </mat-sidenav-container>
+
+</div>

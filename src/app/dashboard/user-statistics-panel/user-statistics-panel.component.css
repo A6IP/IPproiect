@@ -1,0 +1,35 @@
+.dashboard-statistics--container {
+  top: 17%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  width: 400px;
+  height: auto;
+  background-color: #fff;
+  border-radius: 1%;
+}
+
+.statistics-title {
+  font-family: "Manrope", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0.5rem 0.5rem 1.5rem 0.5rem;
+  padding: 0;
+  position: relative;
+  display: block;
+  color: #707070;
+}
+/* responsive design */
+@media (max-width: 1610px) {
+  .dashboard-statistics--container {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+}
+@media (max-width: 600px) {
+  .dashboard-statistics--container {
+    width: 200px;
+  }
+}

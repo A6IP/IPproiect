@@ -1,0 +1,32 @@
+<mat-dialog-content class="panel">
+  <div class="left">
+    <h2>Log In</h2>
+    <p>
+      <span>Don't have an account? </span>
+      <a (click)="goToRegister()" style="cursor: pointer; color: rgba(40,54,85,0.929)"><b>Sign Up</b></a>
+    </p>
+    <form [formGroup]="login" (ngSubmit)="onSubmit()">
+      <section class="fields">
+        <mat-form-field class="width-form" appearance="outline">
+          <mat-label>Email or Username</mat-label>
+          <input matInput type="text" formControlName="email" placeholder="Email or Username">
+          <mat-icon matSuffix>email</mat-icon>
+        </mat-form-field>
+        <mat-form-field class="width-form" appearance="outline">
+          <mat-label>Password</mat-label>
+          <input matInput [type]="!hide ? 'text' : 'password'" formControlName="password" placeholder="Password">
+          <mat-icon matSuffix (click)="hide = !hide"> {{hide ? 'lock_outline' : 'lock_open'}}</mat-icon>
+        </mat-form-field>
+      </section>
+      <section class="form-footer">
+        <mat-checkbox style="justify-self: flex-start;" color="primary">Remember me</mat-checkbox>
+        <a (click)="goToForgotPass()" style="cursor: pointer; justify-self: flex-end;">Forgot Password?</a>
+      </section>
+      <button mat-raised-button type="submit" class="log_btn" [disabled]="!login.valid">Log In</button>
+    </form>
+  </div>
+  <div class="right">
+    <img src="../../../../assets/sun_clouds.png" alt="clouds" width="85%">
+    <img src="../../../../assets/buildings.png" alt="buildings" width="100%">
+  </div>
+</mat-dialog-content>

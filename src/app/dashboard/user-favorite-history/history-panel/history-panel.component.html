@@ -1,0 +1,44 @@
+<div class="history__slider">
+    <ul class="item__list">
+      <button class="prev__btn" class="navigation__btns" id="history__prev" (click)="histPrev()">
+        <img class="scroll__btn" src="../../assets/userDashboard/left.svg" alt="P">
+      </button>
+      <li>
+        <div class="list__item" #item_1>
+          <a [routerLink]="['/house-details', histData[histIndex-1]?.houseID]">
+            <img [src]="histData[histIndex-1]?.photos[0]!=undefined ?
+            this._sanitizer.bypassSecurityTrustResourceUrl('data:image/jpg;base64,'
+               + histData[histIndex-1]?.photos[0]) : '../../assets/userDashboard/default.png'" alt="hist1">
+          </a>
+          <p class="price">{{ histData[histIndex-1]?.currentPrice }}&euro;</p>
+          <p class="description">{{ histData[histIndex - 1]?.noOfRooms }} camere, {{ histData[histIndex - 1]?.surface }} mp, {{histData[histIndex - 1]?.address}}, {{histData[histIndex - 1]?.city}}</p>
+        </div>
+      </li>
+      <li>
+        <div class="list__item" id="item_2">
+          <a [routerLink]="['/house-details', histData[histIndex]?.houseID]">
+            <img [src]="histData[histIndex]?.photos[0]!=undefined ?
+            this._sanitizer.bypassSecurityTrustResourceUrl('data:image/jpg;base64,'
+               + histData[histIndex]?.photos[0]) : '../../assets/userDashboard/default.png'" alt="hist2">
+          </a>
+          <p class="price">{{ histData[histIndex]?.currentPrice }}&euro;</p>
+          <p class="description">{{ histData[histIndex]?.noOfRooms }} camere, {{ histData[histIndex]?.surface }} mp, {{histData[histIndex]?.address}}, {{histData[histIndex]?.city}}</p>
+        </div>
+      </li>
+      <li>
+        <div class="list__item" id="item_3">
+          <a [routerLink]="['/house-details', histData[histIndex+1]?.houseID]">
+            <img [src]="histData[histIndex+1]?.photos[0]!=undefined ?
+            this._sanitizer.bypassSecurityTrustResourceUrl('data:image/jpg;base64,'
+               + histData[histIndex+1]?.photos[0]) : '../../assets/userDashboard/default.png'" alt="hist3">
+          </a>
+          <p class="price">{{ histData[histIndex+1]?.currentPrice }}&euro;</p>
+          <p class="description">{{ histData[histIndex + 1]?.noOfRooms }} camere, {{ histData[histIndex + 1]?.surface }} mp, {{histData[histIndex + 1]?.address}}, {{histData[histIndex + 1]?.city}}</p>
+        </div>
+      </li>
+      <button class="next__btn" class="navigation__btns" id="history__next" (click)="histNext()">
+        <img class="scroll__btn" src="../../assets/userDashboard/right.svg" alt="N">
+      </button>
+    </ul>
+  </div>
+  

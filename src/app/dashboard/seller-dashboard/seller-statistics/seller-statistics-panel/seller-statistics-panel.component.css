@@ -1,0 +1,12 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+.followers-chart--container {
+    height: 80%; }
+  
+.followers-chart {
+    width: 100%;
+    height: 100%;
+}
+  

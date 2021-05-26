@@ -1,0 +1,55 @@
+<mat-dialog-content class="body">
+    <button id="bck_btn" (click)="goToLogin()" style="cursor: pointer;">
+        <mat-icon id="bck_arw" matSuffix>arrow_back</mat-icon>
+        Back
+    </button>
+    <div class="content">
+
+        <div class="left">
+            <h2 mat-dialog-title>Register</h2>
+            <form mat-dialog-content [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                <section>
+                    <mat-form-field class="form-field" appearance="outline">
+                        <mat-label>Full Name</mat-label>
+                        <input  class="firstName" matInput formControlName="fullName" [type]="'text'" required>
+                        <mat-icon matSuffix>person</mat-icon>
+                    </mat-form-field>
+                    <mat-form-field class="form-field" appearance="outline">
+                        <mat-label>Username</mat-label>
+                        <input matInput formControlName="username" type="text" required>
+                        <mat-icon matSuffix>account_box</mat-icon>
+                    </mat-form-field>
+                </section>
+                <section>
+                    <mat-form-field class="form-field" appearance="outline">
+                        <mat-label>Email Address</mat-label>
+                        <input matInput formControlName="emailAddress" [type]="'text'" required>
+                        <mat-icon matSuffix>email</mat-icon>
+                    </mat-form-field>
+                    <mat-form-field class="form-field" appearance="outline">
+                        <mat-label>Phone Number</mat-label>
+                        <input matInput formControlName="phoneNumber" [type]="'text'" required>
+                        <mat-icon matSuffix>phone</mat-icon>
+                    </mat-form-field>
+                </section>
+                <section>
+                    <mat-form-field class="form-field" appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input matInput formControlName="passwd" [type]="hide? 'password' : 'text'" required>
+                            <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off':'visibility'}}</mat-icon>
+                    </mat-form-field>
+                    <mat-form-field class="form-field" appearance="outline">
+                        <mat-label>Confirm Password</mat-label>
+                        <input matInput formControlName="confirmPasswd" [type]="hideConfirm? 'password' : 'text'" required>
+                            <mat-icon matSuffix (click)="hideConfirm = !hideConfirm">{{hideConfirm ? 'visibility_off':'visibility'}}</mat-icon>
+                    </mat-form-field>
+                </section>
+                <button style="margin-bottom: 3%; justify-self: center; align-self: center;" mat-raised-button type="submit" [disabled]="!registerForm.valid">Register</button>
+            </form>
+        </div>
+     
+        <div class="right">
+            <img src="../../../../assets/register_buildings.png" alt="buildings" width="150%" style="justify-self: flex-end; align-self: flex-end;">
+        </div>
+    </div>
+</mat-dialog-content>

@@ -1,0 +1,162 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<div class="component">
+    <div [hidden]="submitted">
+        <p id="title">Add a new property</p>
+        <form (ngSubmit)="onSubmit()" #addForm="ngForm">
+            <div class="columnForm">
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <div class="error_text">
+                        <input type="text" required ngModel name="city" #city="ngModel" id="city" class="form-control" (change)="onCitySet(city)">
+                        <div class="alert alert-danger" *ngIf="city.touched && !city.valid"> City is required </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="country">Country</label>
+                    <div class="error_text">
+                        <input type="text" required ngModel name="country" #country="ngModel" id="country"
+                            class="form-control"
+                            (change)="onCountrySet(country)">
+                        <div class="alert alert-danger" *ngIf="country.touched && !country.valid"> Country is required
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <div class="error_text">
+                        <input type="text" required ngModel name="address" #address="ngModel"
+                            (change)="onAddressSet(address)" id="address" class="form-control">
+                        <div class="alert alert-danger" *ngIf="address.touched && !address.valid"> Location is required
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="usableArea">Usable area (m²)</label>
+                    <div class="error_text">
+                        <input type="number" required min=0 ngModel #usableArea="ngModel" name="usableArea"
+                            (change)="onUsableAreaSet(usableArea)" id="usableArea" class="form-control">
+                        <div class="alert alert-danger" *ngIf="usableArea.touched && !usableArea.valid"> Usable area is
+                            required </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="landSurface">Land surface (m²)</label>
+                    <div class="error_text">
+                        <input type="number" required min=0 ngModel #landSurface="ngModel" name="landSurface"
+                            (change)="onLandSurfaceSet(landSurface)" id="landSurface" class="form-control">
+                        <div class="alert alert-danger" *ngIf="landSurface.touched && !landSurface.valid"> Land surface is
+                            required </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="floor">Floor</label>
+                    <div class="error_text">
+                        <input type="number" required ngModel #floor="ngModel" name="floor" (change)="onFloorSet(floor)"
+                            id="floor" class="form-control">
+                        <div class="alert alert-danger" *ngIf="floor.touched && !floor.valid"> Floor number is required
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="numberOfRooms">Number of rooms</label>
+                    <div class="error_text">
+                        <input type="number" min=0 required ngModel #numberOfRooms="ngModel" name="numberOfRooms"
+                            (change)="onNRSet(numberOfRooms)" id="numberOfRooms" class="form-control">
+                        <div class="alert alert-danger" *ngIf="numberOfRooms.touched && !numberOfRooms.valid"> The
+                            number of rooms is required </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="numberOfBathrooms">Number of bathrooms</label>
+                    <div class="error_text">
+                        <input type="number" required min=0 ngModel #numberOfBathrooms="ngModel"
+                            (change)="onNBSet(numberOfBathrooms)" name="numberOfBathrooms" id="numberOfBathrooms"
+                            class="form-control">
+                        <div class="alert alert-danger" *ngIf="numberOfBathrooms.touched && !numberOfBathrooms.valid">
+                            The number of bathrooms is required </div>
+                    </div>
+                </div>
+            </div>
+                <div class="columnForm">
+
+                    <div class="form-group">
+                        <label for="houseType">House type</label>
+                        <select class="form-select" (change)="onHouseTypeSet($event)">
+                            <option value=0 selected>house</option>
+                            <option value=1>apartment</option>
+                            <option value=2>studio</option>
+                            <option value=3>commercial space</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="sellType">Property purpose</label>
+                        <select class="form-select" (change)="onSellTypeSet($event)">
+                            <option value=0 selected>selling</option>
+                            <option value=1>renting</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="price">Price (Euro)</label>
+                        <div class="error_text">
+                            <input type="number" required min=0 ngModel #price="ngModel" name="price"
+                                (change)="onPriceSet(price)" id="price" class="form-control">
+                            <div class="alert alert-danger" *ngIf="price.touched && !price.valid"> The price is required
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="houseTitle">Title</label>
+                        <div class="error_text">
+                            <input type="text" required ngModel name="title"
+                                #title="ngModel" id="houseTitle" class="form-control" (change)="onTitleSet(title)">
+                            <div class="alert alert-danger" *ngIf="title.touched && !title.valid"> Title
+                                is required </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <div class="error_text">
+                            <input type="text" required ngModel name="description"
+                                #description="ngModel" id="description" class="form-control" (change)="onDescriptionSet(description)">
+                            <div class="alert alert-danger" *ngIf="description.touched && !description.valid"> Description
+                                is required </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="constructionYear">Construction year</label>
+                        <div class="error_text">
+                            <input type="text" required ngModel name="constructionYear"
+                                #constructionYear="ngModel" id="constructionYear" class="form-control" (change)="onConstructionYearSet(constructionYear)">
+                            <div class="alert alert-danger" *ngIf="constructionYear.touched && !constructionYear.valid"> The year of construction
+                                is required </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fileInput"> {{numberOfPhotos}} out 5 pictures of the house</label>
+                        <input type="file" (change)="onFileSelect($event)" required ngModel name="propertyPic"
+                            style="display: none;" #fileInput>
+                        <button type="button" (click)="fileInput.click()" class="btn btn-primary textBtn">Choose an
+                            image </button>
+                    </div>
+                <button type="submit" class="btn btn-primary textBtn" id="addBtn" [disabled]="!addForm.form.valid">
+                    <p> + </p>
+                    <p>Add</p>
+                </button>
+           </div>
+        </form>
+    </div>
+    <div [hidden]= "!submitted">
+    <h1 class="title" [hidden]="wrongAddress"> You have added a new house with the following price: {{currentPrice}}€ and the recommended price is {{recommendedPrice}}€. </h1>
+    <h1 class="title" [hidden]="!wrongAddress">You tried to add a house at a wrong address. </h1>
+    </div>
+</div>

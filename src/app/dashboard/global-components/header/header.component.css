@@ -1,0 +1,29 @@
+nav {
+    background-color: #283655;
+    width: 100%;
+    height: 65px;
+    left: 0;
+    top: 0;
+    position: absolute;
+    font-family: "Manrope", sans-serif;
+    z-index: 99;
+  }
+  
+  .back__btn {
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    left: 100px;
+    top: 10px;
+    position: absolute;
+    font-weight: 700;
+  }
+  .back_arrow {
+    color: #fff;
+    position: absolute;
+    left: 70px;
+    top: 25%;
+    width: 40px;
+    font-size: 17px;
+  }
+  

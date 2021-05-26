@@ -1,0 +1,61 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import url(../node_modules/font-awesome/css/font-awesome.css);
+@import '~swiper/swiper-bundle';
+html,
+body {
+    height: 100%;
+}
+
+
+body {
+    margin: 0;
+}
+
+
+.swiper-button-prev,
+.swiper-button-next {
+    position: absolute;
+    top: 12vh;
+}
+
+.swiper-pagination {
+    display: none;
+}
+.mat-drawer-container {
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: touch;
+    display: block;
+    overflow: hidden;
+}
+/* .cdk-overlay-pane{
+
+position: relative;
+top: -2105px !important;
+width: 220px;
+padding-right: 20px !important; 
+z-index: 10 !important;
+margin-top: 15px !important;
+} */
+
+.pclass .mat-dialog-container {
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    padding: 0px;
+    background-color: rgba(40,54,85,0.929);
+    width: fit-content;
+    max-width: 900px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+:root {
+    scrollbar-width: none !important;
+}

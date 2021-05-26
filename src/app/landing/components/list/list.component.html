@@ -1,0 +1,139 @@
+<!--<app-navbar-logged-in></app-navbar-logged-in>-->
+
+<section class="list-page">
+<form id="search-form" class="form-search"  name="form1" #form="ngForm" (change)="renderPage(form)">
+  <div class="search-input-wrapper">
+    <input type="text" name="string" ngModel>
+
+    <button id="submit" type="button" (click)="renderPage(form)" >
+      <mat-icon>search</mat-icon>
+    </button>
+  </div>
+  <div class="browsing">
+    Browsing listings
+  </div>
+
+  <div class="form">
+    <div class="form1">
+
+      <select ngModel  name="noOfRooms">
+        <option value="" selected> Rooms Number</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10+</option>
+
+      </select>
+
+
+    </div>
+    <div class="form2">
+
+      <select  ngModel name="minPrice" >
+        <option value="" selected> Minimum Price</option>
+        <option value="10000">10.000</option>
+        <option value="20000">15.000</option>
+        <option value="30000">30.000</option>
+        <option value="40000">40.000</option>
+        <option value="50000">50.000</option>
+        <option value="60000">60.000</option>
+        <option value="70000">70.000</option>
+        <option value="80000">80.000</option>
+        <option value="90000">90.000</option>
+        <option value="100000">100.000+</option>
+
+      </select>
+
+
+    </div>
+
+
+    <div class="form3">
+
+      <select ngModel name="maxPrice" >
+        <option value="" selected> Maximum Price</option>
+        <option value="10000">10.000</option>
+        <option value="20000">15.000</option>
+        <option value="30000">30.000</option>
+        <option value="40000">40.000</option>
+        <option value="50000">50.000</option>
+        <option value="60000">60.000</option>
+        <option value="70000">70.000</option>
+        <option value="80000">80.000</option>
+        <option value="90000">90.000</option>
+        <option value="100000">100.000+</option>
+
+      </select>
+
+
+    </div>
+    <div class="form4">
+
+      <select ngModel  name="surface" >
+        <option value="" selected> Surface</option>
+        <option value="30">30mp</option>
+        <option value="40">40mp</option>
+        <option value="50">50mp</option>
+        <option value="60">60mp</option>
+        <option value="70">70mp</option>
+        <option value="80">80mp</option>
+        <option value="90">90mp</option>
+        <option value="100">100mp</option>
+        <option value="125">125mp</option>
+        <option value="150">150mp</option>
+        <option value="175">175mp</option>
+        <option value="200">200mp</option>
+
+      </select>
+
+
+    </div>
+    <div class="form5">
+
+      <select  ngModel name="floor" >
+        <option value="" selected>Floor</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8+</option>
+      </select>
+
+
+    </div>
+    <div class="form6">
+
+      <select ngModel name="noOfBathrooms" >
+        <option value="" selected> Bathrooms Number</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+
+      </select>
+    </div>
+  </div>
+
+</form>
+
+<div  *ngFor="let product of productList  | paginate: { id: 'listing_pagination', itemsPerPage: 8, currentPage: page,totalItems:totalRecords}">
+  <app-house-item [item]="product" [addedToWishlist]="wishlist.indexOf(product.houseID) >= 0"></app-house-item>
+</div>
+
+<div class="pagination-listing">
+  <pagination-controls id="listing_pagination" directionsLink="true" (pageChange)="paginationChange($event)"></pagination-controls>
+</div>
+
+</section>
+<app-footer></app-footer>

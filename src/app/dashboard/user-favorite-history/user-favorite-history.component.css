@@ -1,0 +1,52 @@
+.main {
+  top: 10%;
+  height: 40em;
+  width: 50em;
+  margin-left: 2em;
+  border-radius: 1%;
+  position: relative;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  row-gap: 1.5em;
+}
+
+.text {
+  color: #6d6d6d;
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  white-space: nowrap;
+  margin: 0;
+  margin-left: 1em;
+}
+
+/* responsive design */
+@media (max-width: 1610px) {
+  .text {
+    margin-left: 15%;
+  }
+  .main {
+    width: 40em;
+  }
+}
+@media (max-width: 1150px) {
+  .text {
+    margin-left: 30%;
+    font-size: 20px;
+  }
+  .main {
+    width: 30em;
+  }
+}
+@media (max-width: 800px) {
+  .text {
+    margin-left: 40%;
+  }
+  .main {
+    width: 25em;
+    margin-right: 0;
+  }
+}

@@ -1,0 +1,33 @@
+.panels {
+  position: absolute;
+  top: 15%;
+  left: 20%;
+  height: 78%;
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.user__seller--btns {
+  position: absolute;
+  left: 25%;
+  top: 12%;
+}
+
+.favorite__history--panel {
+  left: -1em;
+}
+
+.statistics__panel {
+  left: 2em;
+}
+
+/* responsive design */
+@media (max-width: 1700px) {
+  .statistics__panel {
+    position: absolute;
+    top: 115%;
+    left: 25%;
+  }
+}

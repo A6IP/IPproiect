@@ -1,0 +1,12 @@
+h1{
+  color: #707070;
+  margin:5% auto;
+  font-size:2.5vw;
+  text-align:center;
+
+}
+@media screen and (max-width: 900px) {
+h1{
+  font-size:6vw;
+}
+}

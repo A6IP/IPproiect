@@ -1,0 +1,43 @@
+<div class="list">
+  <div class="image-wrapper-list">
+    <img class="images"  [src]="item.photos[0]!=undefined ?
+       this._sanitizer.bypassSecurityTrustResourceUrl('data:image/jpg;base64,'
+          + item.photos[0]) : '/assets/house.png'" alt="image">
+  </div>
+  <button id="favorite" mat-icon-button>
+
+    <mat-icon
+      *ngIf="addedToWishlist" (click)="handleRemoveFromWishlist()"
+      aria-label="Example icon-button with a heart icon">
+      favorite
+    </mat-icon>
+
+    <mat-icon
+      *ngIf="!addedToWishlist" (click)="handleAddToWishlist()"
+      aria-label="Example icon-button with a heart icon">
+      favorite_border
+    </mat-icon>
+
+  </button>
+  <div class="house-description">
+    <div class="house-details-wrapper">
+      <div class="details title">{{item.title}} </div>
+
+      <div class="details location">{{item.city}}</div>
+      <div class="details room">Rooms : {{item.noOfRooms}}</div>
+      <div class="details surface">Surface: {{item.surface}}</div>
+      <div class="details type">Type:
+        <div *ngIf="item.sellType==1; else elseBlock">Rent</div>
+        <ng-template #elseBlock>Buy</ng-template>
+      </div>
+    </div>
+    <div class="price-wrapper">
+      <div class="details price">Price : {{item.currentPrice}}</div>
+      <div class="details detail"><a (click)="onClick(item.houseID,item.userID)">View details</a></div>
+    </div>
+
+
+  </div>
+
+
+</div>

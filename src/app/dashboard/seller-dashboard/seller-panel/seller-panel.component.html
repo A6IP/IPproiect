@@ -1,0 +1,9 @@
+<div class="dashboard-panel--container">
+  <h2 class="dashboard-title" *ngIf="getHousesList().length">Your properties</h2>
+  <h2 class="dashboard-title" *ngIf="!getHousesList().length">You have no properties</h2>
+  <ul class="dashboard-house-list">
+    <li *ngFor="let house of getHousesList()">
+      <app-seller-house-panel [house]="house"></app-seller-house-panel>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b9c12803-8edc-43b2-9902-d2c90b59e9cb" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/footer/footer.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/footer/footer.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/footer/footer.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/footer/footer.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gallery-part/gallery-part.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gallery-part/gallery-part.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gallery-part/gallery-part.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gallery-part/gallery-part.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/galleryService/gallery.service.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/galleryService/gallery.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/house-details/house-details.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/house-details/house-details.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/house-details/house-details.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/house-details/house-details.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/house-gallery/house-gallery.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/house-gallery/house-gallery.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/house-gallery/house-gallery.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/house-gallery/house-gallery.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/house-info/_files/info.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/house-info/house-info.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/house-info/house-info.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/house-info/house-info.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/house-info/house-info.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json-typings.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/landing-bottom/landing-bottom.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/landing-bottom/landing-bottom.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/landing-bottom/landing-bottom.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/landing-bottom/landing-bottom.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/landing-page/landing-page.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/landing-page/landing-page.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/landing-page/landing-page.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/landing-page/landing-page.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/landing-search/landing-search.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/landing-search/landing-search.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/landing-search/landing-search.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/landing-search/landing-search.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/list/list.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/list/list.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/list/list.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/list/list.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/list/posts.service.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/list/posts.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/map/map.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/map/map.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/map/map.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/map/map.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/navbar-logged-in/navbar-logged-in.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/navbar-logged-in/navbar-logged-in.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/navbar-logged-in/navbar-logged-in.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/navbar-logged-in/navbar-logged-in.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/navbar/navbar.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/navbar/navbar.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/navbar/navbar.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/navbar/navbar.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo-carousel/photo-carousel.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo-carousel/photo-carousel.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo-carousel/photo-carousel.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo-carousel/photo-carousel.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/posts.service.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/posts.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/house.service.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/house.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/photo-carousel.service.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/photo-carousel.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-contact/user-contact.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-contact/user-contact.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-contact/user-contact.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-contact/user-contact.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-navbar/user-navbar.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-navbar/user-navbar.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-navbar/user-navbar.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-navbar/user-navbar.component.ts" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1sn6ozFDzYHVEwqt9HNJiDY9kWJ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b9c12803-8edc-43b2-9902-d2c90b59e9cb" name="Default Changelist" comment="" />
+      <created>1621496185020</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1621496185020</updated>
+      <workItem from="1621496186355" duration="144000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

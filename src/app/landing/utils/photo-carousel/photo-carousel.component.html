@@ -1,0 +1,21 @@
+<swiper [slidesPerView]="2.6" [spaceBetween]="50" [pagination]="{ type: 'fraction' }" [navigation]="true" [breakpoints]="breakpoints">
+
+  <ng-template class="carousel-container" swiperSlide *ngFor="let item of data">
+    <div class="image-container" (click)="onSelect(item)">
+      <img class="images" [src]="item.photos[0]!=undefined ?
+       this._sanitizer.bypassSecurityTrustResourceUrl('data:image/jpg;base64,'
+          + item.photos[0]) : '/assets/house.png'" alt="image">
+      <div class="image-description">
+
+        <div class="details">{{item.currentPrice}} $ </div>
+        <div class="details">Address: {{item.address}}</div>
+        <div class="details">{{item.description.slice(0,50)}} [...]</div>
+
+
+      </div>
+    </div>
+
+
+  </ng-template>
+
+</swiper>

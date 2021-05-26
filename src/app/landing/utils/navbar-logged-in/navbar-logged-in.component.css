@@ -1,0 +1,160 @@
+/*@font-face {*/
+/*  font-family: Manrope-bold;*/
+/*  !* src: url(./assets/fonts/Manrope-Bold.ttf); *!*/
+/*  src: "./assets/fonts/Manrope-Bold.ttf";*/
+/*}*/
+/*::ng-deep.cdk-overlay-connected-position-bounding-box{*/
+/*  !* These numbers are my requirement, put something which suits yours *!*/
+/*  !*transform: translate(0px, 25px);*!*/
+/*  !*width: 100vw !important;*!*/
+/*}*/
+/*::ng-deep.cdk-overlay-pane{*/
+/*  !*transform: translate(0px, 25px);*!*/
+/*  position: relative !important;*/
+/*  !* top: -2370px !important; *!*/
+
+/*  !* padding-right: 20px !important; *!*/
+/*  z-index: 10 !important;*/
+/*  margin-top: -0.75vw !important;*/
+/*  !*margin-left: auto !important;*!*/
+/*  padding-right:0 !important;*/
+/*}*/
+/*.small_menu{*/
+/*  position: absolute;*/
+/*  margin-left: 100px;*/
+/*}*/
+.spacer {
+  flex: 1 1 auto;
+}
+
+#accountIcon {
+  margin-left: 8px;
+}
+
+.mat-elevation {
+  font-size: 30px;
+  color: #707070;
+  background-color: transparent;
+}
+
+button {
+  font-family: Manrope-bold;
+  font-size: 25px;
+}
+
+.material-icons,
+.mat-button,
+.mat-icon-button,
+.mat-stroked-button,
+.mat-flat-button {
+  color: #707070;
+}
+
+.mat-icon-button {
+  background-color: #FFFF;
+}
+
+
+/**/
+
+mat-toolbar {
+  height: 7vh;
+}
+
+
+mat-sidenav-container {
+  min-height: 93vh !important;
+  height:93vh !important;
+  /* display: none !important; */
+}
+
+a {
+  text-decoration: none;
+  font-size: 110%;
+  white-space: normal;
+}
+
+button {
+  font-size: 100%;
+  min-width: min-content;
+}
+
+.example-icon {
+  padding: 0 14px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+mat-sidenav-content {
+  font-size: 100%;
+  text-align: center;
+}
+
+mat-sidenav {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(56, 56, 73);
+  position: absolute;
+  display: none !important;
+
+}
+
+/* .cdk-overlay-connected-position-bounding-box{
+    position:ab;
+} */
+
+
+
+mat-sidenav a {
+  color: #FFFF ;
+}
+.example-container {
+  position: absolute !important;
+  display: block;
+  z-index: 10;
+}
+
+
+.menu-items {
+  display: flex;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+}
+
+.showing {
+  display: none;
+}
+
+/*.mat-focus-indicator,*/
+/*mat-button mat-button-base {*/
+/*  padding-top: 10px;*/
+/*  padding-bottom:10px;*/
+/*}*/
+.mat-drawer-inner-container{
+  display:none;
+}
+@media (max-width:955px) {
+  .showing {
+    display: block;
+  }
+  .showingBar {
+    display: none;
+  }
+
+  mat-sidenav{
+    display: block !important;
+  }
+
+}
+

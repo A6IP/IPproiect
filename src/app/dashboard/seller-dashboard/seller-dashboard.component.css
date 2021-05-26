@@ -1,0 +1,63 @@
+app-user-info {
+  display: block;
+  height: 100%;
+  width: 20%;
+  padding: 8% 0 0 10px;
+  overflow: hidden;
+}
+
+app-dashboard-buttons {
+  display: block;
+  position: relative;
+  transform: translate(0, -100%);
+  height: 50px;
+  width: 100%;
+}
+
+.user__seller--btns {
+  position: absolute;
+  top: 12%;
+  left: 30%;
+}
+
+.user__seller--btns {
+  position: absolute;
+  top: 7%;
+  left: 30%;
+}
+
+.seller-page {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  top: 20%;
+  left: 20%;
+  width: 80%;
+  height: 70%;
+}
+
+.seller-house-panel--container {
+  background-color: #fffdfd;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 50%;
+  height: 80%;
+  padding: 0 1rem;
+  top: -10%;
+}
+
+.seller-statistics--container {
+  background-color: #fffdfd;
+  position: relative;
+  width: 40%;
+  padding: 0.5rem 1rem;
+  top: -70px;
+  background-color: aqua;
+}
+
+.seller-house-panel-content--container {
+  display: flex;
+  flex-direction: column;
+}

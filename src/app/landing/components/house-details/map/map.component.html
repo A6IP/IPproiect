@@ -1,0 +1,17 @@
+<p>Location</p>
+
+
+<agm-map
+  [latitude]='lat'
+  [longitude]='lng'
+  [zoom]='zoom'>
+
+  <agm-circle
+    *ngFor="let c of circles; let i = index"
+    [latitude]="c.lat "
+    [longitude]="c.lng"
+    [radius]="75"
+    [fillColor]="'#88919c'">
+  </agm-circle>
+
+</agm-map>

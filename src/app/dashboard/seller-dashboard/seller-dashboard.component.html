@@ -1,0 +1,17 @@
+<div class="component_wrapper">
+  <app-header></app-header>
+  <app-user-info></app-user-info>
+
+  <div class="seller-page">
+    <div class="seller-house-panel--container">
+      <app-dashboard-buttons selectedButton="seller"></app-dashboard-buttons>
+      <app-seller-panel [SELLER_ID]="getSellerId()"></app-seller-panel>
+    </div>
+
+    <div class="seller-statistics--container">
+      <app-seller-statistics-panel></app-seller-statistics-panel>
+    </div>
+  </div>
+
+  <app-dash-footer></app-dash-footer>
+</div>

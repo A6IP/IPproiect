@@ -1,0 +1,21 @@
+/*@font-face {*/
+/*    font-family: Montserrat-bold;*/
+/*    src: url(../../../assets/fonts/Montserrat/Montserrat-Bold.ttf);*/
+/*}*/
+agm-map{
+    height:400px;
+    width:80%;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+  margin-right: auto;
+
+}
+p{
+    position: relative;
+    margin-left:10%;
+    margin-top:5vw;
+    font-size: 30px;
+    font-family: Montserrat-bold;
+    color: #707070;
+}
